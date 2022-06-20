@@ -177,14 +177,3 @@ function findIndexByKeyValue(arraytosearch, key, valuetosearch) {
  elAdd.addEventListener("submit", hadleAdd)
  elSearch.addEventListener("submit", handleSearch)
  elEditModal.addEventListener("submit", handleEdit)
-
-
-//  function handleChange (evt) {
-//     if (evt.target.matches('.delete')) {
-//       let deletedItem = evt.target.closest('li')
-//       let itemId = deletedItem.dataset.id
-//       let deletCard = products.filter((product)=> product.id !=itemId)
-//       products = deletCard
-//       renderParrots (deletCard)
-//     }
-//   }
