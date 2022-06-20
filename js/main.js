@@ -163,9 +163,28 @@ function findIndexByKeyValue(arraytosearch, key, valuetosearch) {
     }
         return -1;
     }
-    
+    function hendelDelete(evt){
+        if (evt.target.matches('.js-delete')) {
+            let deleteBtn =  evt.target.closest('li')
+            let BtnId = deleteBtn.dataset.id
+            let deleteCard = products.filter(product => product.id !=BtnId) 
+            products = deleteCard
+            renderProduct(deleteCard);
+        }
+    }
+
+ elList.addEventListener("click", hendelDelete)
  elAdd.addEventListener("submit", hadleAdd)
  elSearch.addEventListener("submit", handleSearch)
  elEditModal.addEventListener("submit", handleEdit)
 
 
+//  function handleChange (evt) {
+//     if (evt.target.matches('.delete')) {
+//       let deletedItem = evt.target.closest('li')
+//       let itemId = deletedItem.dataset.id
+//       let deletCard = products.filter((product)=> product.id !=itemId)
+//       products = deletCard
+//       renderParrots (deletCard)
+//     }
+//   }
